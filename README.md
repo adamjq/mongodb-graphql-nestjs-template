@@ -1,1 +1,7 @@
-# mongodb-node
+# MongoDB Node app
+
+## Development
+
+```
+docker-compose up
+```

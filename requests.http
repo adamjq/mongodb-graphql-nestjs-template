@@ -1,5 +1,5 @@
-### List all cats
-GET http://localhost:3000/cats
+### List all catalogs
+GET http://localhost:3000/catalogs
 
 ### Health check
 GET http://localhost:3000/health

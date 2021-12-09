@@ -9,9 +9,6 @@ interface DBSecrets {
 }
 
 export class ConfigService {
-  private readonly envConfig: Record<string, string>;
-  constructor() {}
-
   public async getMongoConfig() {
     const secrets = this.parseDBSecrets();
     return {

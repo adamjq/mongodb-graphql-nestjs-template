@@ -6,11 +6,13 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     command: npm run start:dev
+    environment:
+      - DB_SECRET={"port":27017,"username":"admin","password":"admin","host":"mongo"}
     ports:
       - 3000:3000
       - 9229:9229
     volumes:
-      - .:/usr/src/app
+      - .:/src
     depends_on:
       - mongo
     links:

@@ -1,8 +1,8 @@
 # MongoDB NestJS Starter Template
 
-This template provides a starting template for web services based on Typescript, NestJS and MongoDB. Some features include:
+This template provides a starting template for web services based on Typescript, GraphQL, NestJS and MongoDB. Some features include:
 - Typescript configuration
-- Basic REST API setup with NestJS
+- Basic GraphQL API setup with NestJS
 - NestJS/MongoDB configuration
 - Basic Mongoose setup
 - Docker setup for NodeJS and MongoDB

@@ -1,0 +1,26 @@
+type Query {
+  catalogItems: CatalogItemPage
+}
+
+type Mutation {
+  storeCatalogItem(item: StoreCatalogItemInput!): CatalogItem
+}
+
+type CatalogItemPage {
+  items: [CatalogItem!]!
+}
+
+type CatalogItem {
+  id: String!
+  name: String!
+  itemType: CatalogItemType!
+}
+
+input StoreCatalogItemInput {
+  name: String!
+  itemType: CatalogItemType!
+}
+
+enum CatalogItemType {
+  ALBUM
+}

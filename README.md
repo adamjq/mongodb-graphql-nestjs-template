@@ -27,3 +27,7 @@ Then navigate to `http://localhost:3000/`
 
 [Mongo Express](https://github.com/mongo-express/mongo-express) can be used for local development to 
 inspect Mongo databases. To inspect tables run `docker-compose up` and navigate to `http://0.0.0.0:8081/`.
+
+### Rest Client
+
+HTTP requests can be tested locally with [requests.http](./requests.http) with the [REST Client VSCode extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).

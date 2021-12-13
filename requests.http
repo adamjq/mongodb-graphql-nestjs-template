@@ -1,5 +1,22 @@
-### List all catalogs
-GET http://localhost:3000/catalogs
+### List all catalog items
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "query { catalogItems { items { id, name, itemType } } }"
+}
+
+### Storecatalog item
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation StoreCatalogItem($item: StoreCatalogItemInput!) { storeCatalogItem(item: $item) { id, name } }",
+  "variables": {
+      "item": { "name": "album-1", "itemType": "ALBUM" }
+    }
+}
+
 
 ### Health check
 GET http://localhost:3000/health

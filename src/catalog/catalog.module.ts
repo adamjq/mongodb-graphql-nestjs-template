@@ -1,14 +1,15 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { CatalogController } from './catalog.controller';
-import { CatalogService } from './catalog.service';
-import { Catalog, CatalogSchema } from './catalog.schema';
+import { CatalogItemsQueryResolver } from './resolvers/catalogItemsQuery.resolver';
+import { StoreCatalogItemMutationResolver } from './resolvers/storeCatalogItemMutation.resolver';
+import { CatalogItem, CatalogItemSchema } from './catalog.schema';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Catalog.name, schema: CatalogSchema }]),
+    MongooseModule.forFeature([
+      { name: CatalogItem.name, schema: CatalogItemSchema },
+    ]),
   ],
-  controllers: [CatalogController],
-  providers: [CatalogService],
+  providers: [CatalogItemsQueryResolver, StoreCatalogItemMutationResolver],
 })
 export class CatalogModule {}
